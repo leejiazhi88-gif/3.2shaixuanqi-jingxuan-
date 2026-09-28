@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-28",
+  "rows": 112,
+  "sheet_id": "rSNcUu",
+  "url": "https://my.feishu.cn/wiki/UI5Tw4yxSiFsEXk5mkmcgqPWnPc?sheet=rSNcUu",
+  "cells_verified": 1892,
+  "condition_format_rules": 8,
+  "source_preserved": true,
+  "other_cells_preserved": true,
+  "earnings_assumptions": "carried forward from source",
+  "history_shortfalls": {
+    "10": 0,
+    "30": 0,
+    "60": 1,
+    "90": 1,
+    "250": 2,
+    "360": 2,
+    "720": 2,
+    "1080": 10
+  }
+}
