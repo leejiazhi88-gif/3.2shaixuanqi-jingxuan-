@@ -138,7 +138,9 @@ def prepare(args, out):
     source_meta, source = values(auth, args.source)
     target_meta, before = values(auth, args.target)
     assert args.source != args.target, 'Use a copied sheet to preserve history'
-    assert target_meta['title'] == args.date.strftime('%Y-%m-%d（精选）')
+    # User-created copies may omit the leading zero in the month or day.
+    target_date = datetime.strptime(target_meta['title'], '%Y-%m-%d（精选）')
+    assert target_date.date() == args.date.date(), 'Target sheet date differs from requested date'
     assert source == before, 'Target must be an unchanged copy of the source'
     headers = before[0]
     idx = {h: i for i, h in enumerate(headers) if h}
